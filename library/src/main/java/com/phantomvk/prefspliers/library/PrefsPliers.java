@@ -4,18 +4,16 @@ import java.lang.reflect.Field;
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import android.annotation.SuppressLint;
 import android.os.Build;
 
-@SuppressWarnings({"unchecked", "SynchronizationOnLocalVariableOrMethodParameter"})
-@SuppressLint("PrivateApi")
 public class PrefsPliers {
 
   /**
    * Init PrefsPliers and injects proxy containers to class android.app.QueuedWork to avoid ANR.
    *
-   * @throws Exception see {@link ClassNotFoundException}, {@link SecurityException}, {@link NoSuchFieldException},
-   *                   {@link IllegalArgumentException}, {@link IllegalAccessException}
+   * @throws Exception see {@link ClassNotFoundException},
+   *                   {@link SecurityException}, {@link NoSuchFieldException},
+   *                   {@link IllegalAccessException}, {@link IllegalArgumentException}
    */
   public static void init() throws Exception {
     if (Build.VERSION.SDK_INT >= 26) {
