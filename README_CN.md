@@ -23,7 +23,7 @@ allprojects {
 }
 
 dependencies {
-  implementation 'com.github.phantomVK:PrefsPliers:latest'
+  implementation "com.github.phantomVK:PrefsPliers:latest.release"
 }
 ```
 
